@@ -29,7 +29,7 @@ AUTH_USER_MODEL= 'users.User'
 
 INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
-    #"debug_toolbar",
+    "debug_toolbar",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #"debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Phi_mart.wsgi.application'
+WSGI_APPLICATION = 'Phi_mart.wsgi.app'
 
 
 # Database
