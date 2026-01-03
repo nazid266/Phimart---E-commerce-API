@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Phi_mart.wsgi.application'
+WSGI_APPLICATION = 'Phi_mart.wsgi.app'
 
 
 # Database
