@@ -198,7 +198,7 @@ class ReviewViewSet(ModelViewSet):
     
     def get_queryset(self):
         if getattr(self,'swagger_fake_view',False):
-            return Review.objects.none
+            return Review.objects.none()
         return Review.objects.filter(product_id=self.kwargs.get('product_pk'))
     
     def get_serializer_context(self):

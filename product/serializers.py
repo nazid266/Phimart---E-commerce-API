@@ -94,7 +94,7 @@ class Review_serializer(serializers.ModelSerializer):
     class Meta:
         model=Review
         fields=['id','user','product','ratings','comment']
-        read_only=['user','product']
+        read_only_fields=['user','product']
     
     def get_user(self, obj):
         return SimpleUserSerializer(obj.user).data

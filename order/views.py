@@ -39,12 +39,12 @@ class CartItemViewSet(ModelViewSet):
         if getattr(self, 'swagger_fake_view', False):
             return context
         
-        return {'cart_id':self.kwargs['cart_pk']}
+        return {'cart_id':self.kwargs.get('cart_pk')}
             
     def get_queryset(self):
         if getattr(self,'swagger_fake_view',False):
-            return CartItem.objects.none
-        return CartItem.objects.select_related('product').filter(cart_id=self.kwargs['cart_pk'])
+            return CartItem.objects.none()
+        return CartItem.objects.select_related('product').filter(cart_id=self.kwargs.get('cart_pk'))
 
 
 class OrderViewSet(ModelViewSet):
